@@ -45,15 +45,15 @@
 
 <script>
 navigator.geolocation.getCurrentPosition(position => {
-  const { latitude, longitude, accuracy, speed } = position.coords;
+  const { latitude, longitude, altitude, accuracy, speed } = position.coords;
   const { timestamp } = position;
-  document.getElementById("current").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
+  document.getElementById("current").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Altitude: ${altitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
 });
 
 navigator.geolocation.watchPosition(position => {
-  const { latitude, longitude, accuracy, speed } = position.coords;
+  const { latitude, longitude, altitude, accuracy, speed } = position.coords;
   const { timestamp } = position;
-  document.getElementById("watch").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
+  document.getElementById("watch").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Altitude: ${altitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
 });
 </script>
 </body>
