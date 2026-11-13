@@ -1,78 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>R506 : Prog multimédia</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #222;
-      color: #eee;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .liste {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    .td {
-      background: #333;
-      border-radius: 6px;
-      padding: 12px;
-      width: 200px;
-    }
-    .td h2 {
-      font-size: 1em;
-      text-align: center;
-      margin: 0 0 10px;
-    }
-    .td a {
-      display: block;
-      background: #444;
-      color: #eee;
-      text-decoration: none;
-      text-align: center;
-      padding: 8px;
-      margin-bottom: 6px;
-      border-radius: 4px;
-    }
-    .td a:hover {
-      background: #666;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R506 : Prog multimédia</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-  <h1>R506 : Prog multimédia</h1>
+      body {
+        margin: 0;
+        padding: 30px 20px;
+        font-family: Arial, sans-serif;
+        background-color: #202020;
+        color: #fff;
+      }
 
-  <div class="liste">
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 8px 10px 12px;
+        background-color: #202020;
+        border-radius: 5px;
+      }
 
-    <div class="td">
-      <h2>CartoTD1</h2>
-      <a href="CartoTD1/Exo1/index.html">Exercice 1</a>
-      <a href="CartoTD1/Exo2/index.html">Exercice 2</a>
-      <a href="CartoTD1/Exo3/index.html">Exercice 3</a>
+      header {
+        background-color: #303030;
+        text-align: center;
+        padding: 3px 10px 7px;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #fff;
+        font-size: 26px;
+      }
+
+      .cartes {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .carte {
+        background-color: #303030;
+        border: 1px solid #3d3d3d;
+        border-radius: 5px;
+        padding: 12px 8px;
+        min-height: 110px;
+        box-shadow: 0 2px 5px #111;
+      }
+
+      .carte h2 {
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+        margin: 0 0 9px;
+      }
+
+      .carte a {
+        display: block;
+        background-color: #414141;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 11px;
+        padding: 6px 4px;
+        margin: 4px 0;
+        border: 1px solid #484848;
+        border-radius: 2px;
+      }
+
+      .carte a:hover {
+        background-color: #606060;
+      }
+
+      @media (max-width: 650px) {
+        .cartes {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body {
+          padding: 15px 10px;
+        }
+      }
+
+      @media (max-width: 350px) {
+        .cartes {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>R506 : Prog multimédia</h1>
+      </header>
+
+      <main class="cartes">
+        <section class="carte">
+          <h2>CartoTD1</h2>
+          <a href="./CartoTD1/Exo1/index.html">Exercice 1</a>
+        </section>
+      </main>
     </div>
-
-    <div class="td">
-      <h2>CartoTD2</h2>
-      <a href="CartoTD2/Exo1/index.html">Exercice 1</a>
-      <a href="CartoTD2/Exo2/index.html">Exercice 2</a>
-      <a href="CartoTD2/Exo3/index.html">Exercice 3</a>
-    </div>
-
-    <div class="td">
-      <h2>CartoTD3</h2>
-      <a href="CartoTD3/Exo1/index.html">Exercice 1</a>
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
+

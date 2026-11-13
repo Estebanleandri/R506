@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercice 1</title>
+<style>
+.mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.mini-header a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.mini-header .logo {
+    font-weight: bold;
+    font-size: 14px;
+}
+</style>
+</head>
+<header class="mini-header">
+    <a href="../../index.html" class="logo">
+        R506 : Prog multimédia
+    </a>
+
+    <nav>
+        <a href="../../index.html">Accueil</a>
+    </nav>
+</header>
+
+<body>
+<h2>getCurrentPosition()</h2>
+<p id="current"></p>
+
+<h2>watchPosition()</h2>
+<p id="watch"></p>
+
+<script>
+navigator.geolocation.getCurrentPosition(position => {
+  const { latitude, longitude, accuracy, speed } = position.coords;
+  const { timestamp } = position;
+  document.getElementById("current").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
+});
+
+navigator.geolocation.watchPosition(position => {
+  const { latitude, longitude, accuracy, speed } = position.coords;
+  const { timestamp } = position;
+  document.getElementById("watch").textContent = `Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy}, Speed: ${speed}, Date: ${new Date(timestamp).toLocaleString()}`;
+});
+</script>
+</body>
+</html>
