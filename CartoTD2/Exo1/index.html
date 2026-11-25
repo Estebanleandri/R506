@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercice 1</title>
+<style>
+.mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.mini-header a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.mini-header .logo {
+    font-weight: bold;
+    font-size: 14px;
+}
+</style>
+</head>
+<header class="mini-header">
+    <a href="../../index.html" class="logo">
+        R506 : Prog multimédia
+    </a>
+
+    <nav>
+        <a href="../../index.html">Accueil</a>
+    </nav>
+</header>
+
+<body>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
